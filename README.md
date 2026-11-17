@@ -23,10 +23,3 @@ Plataforma web desarrollada para la digitalización y simulación del agendamien
   * Verificación de la factibilidad del alcance y consistencia del prototipo respecto a la documentación.
 
 ---
-
-## Tecnologías Utilizadas
-
-* **HTML5:** Estructuración semántica del sitio web.
-* **CSS3 & Bootstrap 5:** Estilos personalizados y grilla adaptativa para dispositivos móviles y computadores.
-* **JavaScript (Vanilla):** Manipulación del DOM e interacción en tiempo real para la simulación de reservas.
-* **GitHub & GitHub Pages:** Control de versiones y alojamiento web en vivo.
