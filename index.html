@@ -81,7 +81,7 @@
       
       <!-- Sección de Reservas (RF-02 y RF-03) -->
       <section id="zona-reservas" class="container mt-5 mb-5 zona-agendamiento">
-        <h2 class="mb-4 text-center">Disponibilidad de Canchas 🎾</h2>
+        <h2 class="mb-4 text-center">Disponibilidad de Canchas </h2>
 
         <div class="row">
           <div class="col-12 col-md-6 mb-3">
@@ -107,7 +107,7 @@
             <div class="d-flex flex-wrap gap-2">
               <button class="btn btn-outline-success p-3 btn-reserva-libre">10:00 - 11:30 hrs</button>
               <button class="btn btn-danger p-3 btn-reserva-ocupada" disabled>11:30 - 13:00 hrs (Ocupado)</button>
-              <button class="btn btn-outline-success p-3 btn-reserva-libre">18:00 - 19:30 hrs</button>
+              <button class="btn btn-outline-success p-3 btn-reserva-libre">20:00 - 21:30 hrs</button>
             </div>
           </div>
         </div> 
@@ -133,7 +133,7 @@
         <h2 class="text-center mb-3">Nuestra Ubicación</h2>
         <p class="text-center">Encuéntranos en el corazón deportivo de Chiguayante. Contamos con estacionamiento gratuito para todos los jugadores inscritos.</p>
         <div class="text-center">
-          <button class="btn btn-primary">Ver mapa en Google Maps</button>
+          <a href="https://www.google.com/maps/search/Chiguayante" target="_blank" class="btn btn-primary">Ver mapa en Google Maps</a>
         </div>
       </section>
 
@@ -165,11 +165,11 @@
         boton.addEventListener('click', function() {
           
           // RF-04: Ventana que solicita nombre (Prompt)
-          let nombreJugador = prompt(" Ingrese su nombre para confirmar la reserva:");
+          let nombreJugador = prompt("Ingrese su nombre para confirmar la reserva:");
 
           // RF-05: Validación básica (Si apretó cancelar o lo dejó en blanco)
           if (nombreJugador === null || nombreJugador.trim() === "") {
-            alert(" Reserva cancelada. Debe ingresar un nombre válido.");
+            alert("Reserva cancelada. Debe ingresar un nombre válido.");
             return; // Corta la ejecución de la función aquí
           }
 
@@ -186,7 +186,7 @@
           this.disabled = true;
 
           // Mensaje de éxito opcional
-          alert(" ¡Hora reservada con éxito para " + nombreJugador + "!");
+          alert("¡Hora reservada con éxito para " + nombreJugador + "!");
         });
       });
     </script>
