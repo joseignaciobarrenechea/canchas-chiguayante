@@ -26,8 +26,7 @@
         background-color: #97DB4F;
       }
     </style>
-
-    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    
   </head>
   
   <body>
@@ -98,7 +97,7 @@
           </div>           
         </div>
 
-        <!-- Bloques horarios Cancha 1 (Arcilla) - Acorde a los registros de ejemplo del ERS -->
+        <!-- Bloques horarios Cancha 1 (Arcilla) - Horarios Oficiales de la cancha -->
         <div class="collapse mt-2" id="canchaArcilla" data-bs-parent="#zona-reservas">
           <div class="card card-body border-success contenedor-horarios">
             <h4 class="text-success">Bloques disponibles - Cancha 1 (Arcilla)</h4>
@@ -112,7 +111,7 @@
           </div>
         </div> 
 
-        <!-- Bloques horarios Cancha 2 (Rápida) - Acorde a los registros de ejemplo del ERS -->
+        <!-- Bloques horarios Cancha 2 (Rápida) - Horarios Oficiales de la cancha  -->
         <div class="collapse mt-2" id="canchaRapida" data-bs-parent="#zona-reservas">
           <div class="card card-body border-secondary contenedor-horarios">
             <h4 class="text-secondary">Bloques disponibles - Cancha 2 (Rápida)</h4>
@@ -150,17 +149,13 @@
     <!-- Script de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
-    <!-- Aquí cargarán el script JS tuyo y de Paloma para la interactividad (RF-04, RF-05, RF-06) -->
-    <!-- <script src="js/reservas.js"></script> -->
-  <!-- Script de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
+   
     <!-- LÓGICA DE RESERVAS EN JAVASCRIPT (RF-04, RF-05, RF-06) -->
     <script>
       // 1. Seleccionamos todos los botones que tienen la clase de "hora libre"
       const botonesLibres = document.querySelectorAll('.btn-reserva-libre');
 
-      // 2. Usamos un ciclo (como harían en C#) para asignarle la acción de clic a cada botón
+      // 2. Usamos un ciclo para asignarle la acción de clic a cada botón
       botonesLibres.forEach(boton => {
         boton.addEventListener('click', function() {
           
