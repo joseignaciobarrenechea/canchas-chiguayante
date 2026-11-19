@@ -21,5 +21,4 @@ Plataforma web desarrollada para la digitalización y simulación del agendamien
   * Definición de requisitos funcionales y no funcionales (RF/RNF) alineados con las necesidades del cliente.
   * Co-desarrollo y pruebas de la lógica de negocio e interacción en JavaScript.
   * Verificación de la factibilidad del alcance y consistencia del prototipo respecto a la documentación.
-
 ---
