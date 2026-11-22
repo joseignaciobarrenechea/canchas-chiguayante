@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reservas - Club de Tenis Chiguayante</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+
+    <!-- MENU -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-md">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Escudo_de_Chiguayante.svg" alt="Logo" width="30" class="me-2">
+            Club de Tenis Chiguayante
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" href="reservas.html">Reservas</a></li>
+              <li class="nav-item"><a class="nav-link" href="ubicacion.html">Ubicación</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-5" id="zona-reservas">
+      <h1 class="text-center mb-4">Disponibilidad de Canchas</h1>
+
+      <!-- Mensaje para indicar la reserva de una cancha -->
+      <div id="mensaje" class="alert alert-success d-none"></div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 mb-3">
+          <button class="btn btn-success w-100 py-3" data-bs-toggle="collapse" data-bs-target="#canchaArcilla">
+            Cancha 1 (Arcilla)
+          </button>
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+          <button class="btn btn-secondary w-100 py-3" data-bs-toggle="collapse" data-bs-target="#canchaRapida">
+            Cancha 2 (Rápida)
+          </button>
+        </div>
+      </div>
+
+      <!-- Horarios cancha 1-->
+      <div class="collapse mt-2" id="canchaArcilla" data-bs-parent="#zona-reservas">
+        <div class="card card-body border-success">
+          <h2 class="h4 text-success">Horarios - Cancha 1 (Arcilla)</h2>
+          <p>Elige un horario para reservar:</p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-success p-3 hora-libre" data-cancha="Cancha 1 (Arcilla)" data-hora="10:00 - 11:30 hrs">10:00 - 11:30 hrs</button>
+            <button class="btn btn-danger p-3" disabled>11:30 - 13:00 hrs (Ocupado)</button>
+            <button class="btn btn-outline-success p-3 hora-libre" data-cancha="Cancha 1 (Arcilla)" data-hora="20:00 - 21:30 hrs">20:00 - 21:30 hrs</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horarios cancha 2 -->
+      <div class="collapse mt-2" id="canchaRapida" data-bs-parent="#zona-reservas">
+        <div class="card card-body border-secondary">
+          <h2 class="h4 text-secondary">Horarios - Cancha 2 (Rápida)</h2>
+          <p>Elige un horario para reservar:</p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-secondary p-3 hora-libre" data-cancha="Cancha 2 (Rápida)" data-hora="08:00 - 09:30 hrs">08:00 - 09:30 hrs</button>
+            <button class="btn btn-outline-secondary p-3 hora-libre" data-cancha="Cancha 2 (Rápida)" data-hora="09:30 - 11:00 hrs">09:30 - 11:00 hrs</button>
+            <button class="btn btn-danger p-3" disabled>11:00 - 12:30 hrs (Ocupado)</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Ventana para solicitar el Nombre -->
+    <div class="modal fade" id="modalReserva" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <form id="formulario" novalidate>
+            <div class="modal-header">
+              <h2 class="modal-title fs-5">Confirmar reserva</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <p>
+                <strong id="textoCancha"></strong><br>
+                <span id="textoHora"></span>
+              </p>
+
+              <label for="nombre" class="form-label">Tu nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Ej: Maria Perez" required minlength="3" maxlength="40" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
+              <div class="invalid-feedback">
+              Escribe tu nombre usando solo letras (mínimo 3 caracteres).
+             </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-success">Reservar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-white text-center py-4 mt-5">
+      <p class="mb-0">Hecho por: Joseignacio, Luna y Paloma</p>
+      <small>Proyecto Web - 2026</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="reservas.js"></script>
+  </body>
+</html>
